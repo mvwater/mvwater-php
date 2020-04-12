@@ -7,3 +7,8 @@ os: ubuntu
 dist: bionic
 services:
   - mysql
+script:
+  - php select_all.php
+  - php search_all.php
+  - php search_select.php
+  
