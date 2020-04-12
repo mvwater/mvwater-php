@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html style="background-color: #373737;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background-color: #3c3c3c;">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-search" style="background-color: #b794ff;">
+        <div class="container"><a class="navbar-brand" href="#">MVAD</a><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+    </nav>
+    <div class="container" style="margin: 10px;">
+        <div class="row">
+            <div class="col">
+                <p class="text-light">Welcome to the MVAD software system. Make a search query below.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="search_all.php" method="post">
+                    <div class="form-group"><label class="text-light" for="all_search_field" style="margin: 10px;" hidden="">Simple Search All:&nbsp;</label><input class="form-control" type="text" id="all_search_field" name="all_search_field" required="" placeholder="Search Query">
+                        <button
+                            class="btn btn-primary" type="submit" onsubmit="search_all.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button>
+                    </div>
+                </form>
+                <hr style="border: 1px solid #c3c3c3;">
+                <form action="search_select.php" method="post">
+                    <div class="form-group"><label class="text-light" for="select_search_field" style="margin: 10px;" hidden="">Select Search:</label><input class="form-control" type="text" id="all_search_field" name="select_search_field" required="" placeholder="Search Query">
+                        <label
+                            class="text-light" style="margin: 10px;" for="search_by">Search By:&nbsp;</label><select class="form-control" id="search_by" required=""><option value="AccountNo" selected="">Search by account number</option><option value="TAdd1">Search by address</option></select><button class="btn btn-primary"
+                                type="submit" onsubmit="select_search.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button></div>
+                </form>
+                <hr style="border: 1px solid #c3c3c3;">
+                <form action="select_all.php" method="post">
+                    <div class="form-group"><label class="text-light" for="select_search_field" style="margin: 10px;">Display All Entries<br>This operation might take a long time! Please confirm that you want to carry out this operation!<br>During the operation, your web browser or the remote server may appear to hang.<br></label>
+                        <select
+                            class="form-control" id="confirm" required="">
+                            <option value="" selected="" disabled="">Please confirm!</option>
+                            <option value="confirm">Yes, I really want to do this</option>
+                            </select><button class="btn btn-primary" type="submit" onsubmit="select_search.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color: #282828;">
+        <footer>
+            <p class="text-muted copyright">Made with&nbsp;<i class="fa fa-heart"></i> by S Canfield, M Brydon, S Kim in Gambier, Ohio</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
