@@ -50,7 +50,7 @@
   // Are there any errors?
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
-    dubug_to_console("Retrieving records.");
+    debug_to_console("Retrieving records.");
     echo "Retrieving the requested records.";
     // Output the data from each row
     // Check to make sure we're not returning an empty query
