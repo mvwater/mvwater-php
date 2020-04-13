@@ -30,7 +30,7 @@
   !isset($_POST['search_by'])) {
     debug_to_console($_POST['select_search_field']);
     debug_to_console($_POST['search_by']);
-    died('There seems to be a problem with what you searched for.');
+    echo "There seems to be a problem with what you searched for.";
   }
 
   // Clean the input to prevent against injection attacks
