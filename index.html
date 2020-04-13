@@ -30,6 +30,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
+          <p class="text-light">Search all searchable fields: account number, account status, name, address, phone, email, date of birth.</p>
 					<form action="search_all.php" method="post">
 						<div class="form-group">
 							<label class="text-light" for="all_search_field" style="margin: 10px;" hidden="">Simple Search All:&nbsp;</label>
@@ -40,6 +41,7 @@
 						</div>
 					</form>
 					<hr style="border: 1px solid #c3c3c3;">
+          <p class="text-light">Search by account number or address by selecting from the dropdown selection, then entering your search query.</p>
 					<form action="search_select.php" method="post">
 						<div class="form-group">
 							<label class="text-light" for="select_search_field" style="margin: 10px;" hidden="">Select Search:</label>
@@ -56,6 +58,31 @@
 						</div>
 					</form>
 					<hr style="border: 1px solid #c3c3c3;">
+          <p class="text-light">Find comments, consumption history, payment history, or receivables history by account number or address, then enter your search query.</p>
+          <form action="search_select_joined.php" method="post">
+						<div class="form-group">
+							<label class="text-light" for="select_search_field" style="margin: 10px;" hidden="">Select Search:</label>
+							<input class="form-control" type="text" id="all_search_field" name="select_search_field" required="" placeholder="Search Query">
+							<label class="text-light" style="margin: 10px;" for="search_by">Search By:&nbsp;</label>
+							<select class="form-control" id="search_by" required="">
+								<option value="AccountNo" selected="">Search by account number</option>
+								<option value="TAdd1">Search by address</option>
+							</select>
+              <label class="text-light" style="margin: 10px;" for="search_attribute">Result Attribute:&nbsp;</label>
+              <select class="form-control" id="search_attribute" required="">
+                <option value="comments" selected="">Find comments</option>
+                <option value="consumptionhistory">Find consumption history</option>
+                <option value="paymenthistory">Find payment history</option>
+                <option value="receivableshistory">Find receivables history</option>
+              </select>
+							<button class="btn btn-primary" type="submit" onsubmit="search_select_joined.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;">
+							<i class="fa fa-search"></i>
+							&nbsp;SEARCH
+							</button>
+						</div>
+					</form>
+					<hr style="border: 1px solid #c3c3c3;">
+          <p class="text-light">Display all of the entries in the database.</p>
 					<form action="select_all.php" method="post">
 						<div class="form-group">
 							<label class="text-light" for="select_search_field" style="margin: 10px;">Display All Entries<br>This operation might take a long time! Please confirm that you want to carry out this operation!<br>During the operation, your web browser or the remote server may appear to hang.<br></label>
