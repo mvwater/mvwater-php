@@ -73,6 +73,8 @@
         echo "Tenant Driver's License Number: ".$row["TDL#"]."<br>";
         echo "Tenant Cell Phone Number: ".$row["TCell#"]."<br>";
         echo "Tenant Date of Birth: ".$row["TDoB"]."<br>";
+        echo "<br>";
+        echo "<hr>";
       }
     } else {
       echo "0 results.";
