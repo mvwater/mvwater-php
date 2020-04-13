@@ -35,11 +35,17 @@
   $searchQuery = mysqli_real_escape_string($link, $_POST['all_search_field'] );
 
   $sql = "SELECT AccountNo,AcctStatus,TName,TAdd1,TPhone,TEmail,TDoB
-  FROM accounts WHERE AccountNo LIKE ('".$searchQuery."') OR AcctStatus LIKE ('".$searchQuery."') OR TName LIKE ('".$searchQuery."') OR TAdd1 LIKE ('".$searchQuery."') OR TPhone LIKE ('".$searchQuery."') OR TEmail LIKE ('".$searchQuery."') OR TDoB LIKE ('".$searchQuery."')";
+  FROM accounts WHERE AccountNo LIKE ('".$searchQuery."')
+  OR AcctStatus LIKE ('".$searchQuery."')
+  OR TName LIKE ('".$searchQuery."')
+  OR TAdd1 LIKE ('".$searchQuery."')
+  OR TPhone LIKE ('".$searchQuery."')
+  OR TEmail LIKE ('".$searchQuery."')
+  OR TDoB LIKE ('".$searchQuery."')";
 
   debug_to_console("Query to execute: $sql");
 
-  //mysqli_query($link, $sql );
+  $result = mysqli_query($link, $sql );
 
   // Are there any errors?
   if (mysqli_query($link, $sql)) {
@@ -48,9 +54,9 @@
     echo "Retrieving the requested records.";
     // Output the data from each row
     // Check to make sure we're not returning an empty query
-    if (mysqli_num_rows($sql) > 0) {
+    if (mysqli_num_rows($result) > 0) {
       // Iterate through rows
-      while ($row = mysqli_fetch_assoc($sql)) {
+      while ($row = mysqli_fetch_assoc($result)) {
         echo "Account Number: ".$row["AccountNo"]."<br>";
         echo "Account Status: ".$row["AcctStatus"]."<br>";
         echo "Service Start Date: ".$row["SrtDate"]."<br>";
