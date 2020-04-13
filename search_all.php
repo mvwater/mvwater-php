@@ -33,12 +33,12 @@
 
   $sql = "SELECT AccountNo,AcctStatus,TName,TAdd1,TPhone,TEmail,TDoB
   FROM accounts WHERE AccountNo LIKE ('".$searchQuery."')
-  OR WHERE AcctStatus LIKE ('".$searchQuery."')
-  OR WHERE TName LIKE ('".$searchQuery."')
-  OR WHERE TAdd1 LIKE ('".$searchQuery."')
-  OR WHERE TPhone LIKE ('".$searchQuery."')
-  OR WHERE TEmail LIKE ('".$searchQuery."')
-  OR WHERE TDoB LIKE ('".$searchQuery."')";
+  OR AcctStatus LIKE ('".$searchQuery."')
+  OR TName LIKE ('".$searchQuery."')
+  OR TAdd1 LIKE ('".$searchQuery."')
+  OR TPhone LIKE ('".$searchQuery."')
+  OR TEmail LIKE ('".$searchQuery."')
+  OR TDoB LIKE ('".$searchQuery."')";
 
   debug_to_console("Query to execute: $sql");
 
