@@ -54,9 +54,9 @@
     echo "Retrieving the requested records.";
     // Output the data from each row
     // Check to make sure we're not returning an empty query
-    if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($sql) > 0) {
       // Iterate through rows
-      while ($row = mysqli_fetch_assoc($result)) {
+      while ($row = mysqli_fetch_assoc($sql)) {
         echo "Account Number: ".$row["AccountNo"]."<br>";
         echo "Account Status: ".$row["AcctStatus"]."<br>";
         echo "Service Start Date: ".$row["SrtDate"]."<br>";
