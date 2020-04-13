@@ -47,7 +47,7 @@
 							<label class="text-light" for="select_search_field" style="margin: 10px;" hidden="">Select Search:</label>
 							<input class="form-control" type="text" id="all_search_field" name="select_search_field" required="" placeholder="Search Query">
 							<label class="text-light" style="margin: 10px;" for="search_by">Search By:&nbsp;</label>
-							<select class="form-control" id="search_by" required="">
+							<select class="form-control" id="search_by" name="search_by" required="">
 								<option value="AccountNo" selected="">Search by account number</option>
 								<option value="TAdd1">Search by address</option>
 							</select>
@@ -64,12 +64,12 @@
 							<label class="text-light" for="select_search_field" style="margin: 10px;" hidden="">Select Search:</label>
 							<input class="form-control" type="text" id="all_search_field" name="select_search_field" required="" placeholder="Search Query">
 							<label class="text-light" style="margin: 10px;" for="search_by">Search By:&nbsp;</label>
-							<select class="form-control" id="search_by" required="">
+							<select class="form-control" id="search_by" name="search_by" required="">
 								<option value="AccountNo" selected="">Search by account number</option>
 								<option value="TAdd1">Search by address</option>
 							</select>
               <label class="text-light" style="margin: 10px;" for="search_attribute">Result Attribute:&nbsp;</label>
-              <select class="form-control" id="search_attribute" required="">
+              <select class="form-control" id="search_attribute" name="search_attribute" required="">
                 <option value="comments" selected="">Find comments</option>
                 <option value="consumptionhistory">Find consumption history</option>
                 <option value="paymenthistory">Find payment history</option>
@@ -86,7 +86,7 @@
 					<form action="select_all.php" method="post">
 						<div class="form-group">
 							<label class="text-light" for="select_search_field" style="margin: 10px;">Display All Entries<br>This operation might take a long time! Please confirm that you want to carry out this operation!<br>During the operation, your web browser or the remote server may appear to hang.<br></label>
-							<select class="form-control" id="confirm" required="">
+							<select class="form-control" id="confirm" name="confirm" required="">
 								<option value="" selected="" disabled="">Please confirm!</option>
 								<option value="confirm">Yes, I really want to do this</option>
 							</select>
