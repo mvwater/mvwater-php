@@ -1,6 +1,6 @@
 <?php
   // For testing only; REMOVE BEFORE PRODUCTION!
-  ini_set('display_errors','1');
+  //ini_set('display_errors','1');
 
   // Allow console writing
   function debug_to_console($data) {
