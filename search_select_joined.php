@@ -32,7 +32,7 @@
     debug_to_console($_POST['select_search_field']);
     debug_to_console($_POST['search_by']);
     debug_to_console($_POST['search_attribute']);
-    echo "There seems to be a problem with what you searched for.";
+    echo "There seems to be a problem with what you searched for.<br>";
   }
 
   // Clean the input to prevent against injection attacks
@@ -55,7 +55,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -84,7 +84,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -114,7 +114,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -150,7 +150,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -187,7 +187,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -219,9 +219,9 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   debug_to_console("Query to execute: $sql");
   $result = mysqli_query($link, $sql );
   if (mysqli_query($link, $sql)) {
-    debug_to_console("Records query executed successfully.");
-    debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    debug_to_console("Records query executed successfully.<br>");
+    debug_to_console("Retrieving records.<br>");
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -255,7 +255,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
@@ -290,7 +290,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
     debug_to_console("Retrieving records.");
-    echo "Retrieving the requested records.";
+    echo "Retrieving the requested records.<br>";
     if (mysqli_num_rows($result) > 0) {
       // Output data of each row
       while ($row = mysqli_fetch_assoc($result)) {
