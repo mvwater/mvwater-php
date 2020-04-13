@@ -35,13 +35,7 @@
   $searchQuery = mysqli_real_escape_string($link, $_POST['all_search_field'] );
 
   $sql = "SELECT AccountNo,AcctStatus,TName,TAdd1,TPhone,TEmail,TDoB
-  FROM accounts WHERE AccountNo LIKE ('".$searchQuery."')
-  OR AcctStatus LIKE ('".$searchQuery."')
-  OR TName LIKE ('".$searchQuery."')
-  OR TAdd1 LIKE ('".$searchQuery."')
-  OR TPhone LIKE ('".$searchQuery."')
-  OR TEmail LIKE ('".$searchQuery."')
-  OR TDoB LIKE ('".$searchQuery."')";
+  FROM accounts WHERE AccountNo LIKE ('".$searchQuery."') OR AcctStatus LIKE ('".$searchQuery."') OR TName LIKE ('".$searchQuery."') OR TAdd1 LIKE ('".$searchQuery."') OR TPhone LIKE ('".$searchQuery."') OR TEmail LIKE ('".$searchQuery."') OR TDoB LIKE ('".$searchQuery."')";
 
   debug_to_console("Query to execute: $sql");
 
