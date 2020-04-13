@@ -37,7 +37,7 @@
                     <div class="form-group"><label class="text-light" for="select_search_field" style="margin: 10px;" hidden="">Select Search:</label><input class="form-control" type="text" id="all_search_field" name="select_search_field" required="" placeholder="Search Query">
                         <label
                             class="text-light" style="margin: 10px;" for="search_by">Search By:&nbsp;</label><select class="form-control" id="search_by" required=""><option value="AccountNo" selected="">Search by account number</option><option value="TAdd1">Search by address</option></select><button class="btn btn-primary"
-                                type="submit" onsubmit="select_search.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button></div>
+                                type="submit" onsubmit="search_select.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button></div>
                 </form>
                 <hr style="border: 1px solid #c3c3c3;">
                 <form action="select_all.php" method="post">
@@ -46,7 +46,7 @@
                             class="form-control" id="confirm" required="">
                             <option value="" selected="" disabled="">Please confirm!</option>
                             <option value="confirm">Yes, I really want to do this</option>
-                            </select><button class="btn btn-primary" type="submit" onsubmit="select_search.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button></div>
+                          </select><button class="btn btn-primary" type="submit" onsubmit="select_all.php" style="margin: 10px;color: rgb(52,58,64);background-color: #b794ff;"><i class="fa fa-search"></i>&nbsp;SEARCH</button></div>
                 </form>
             </div>
         </div>
