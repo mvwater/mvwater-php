@@ -38,16 +38,36 @@
 
   debug_to_console("Query to execute: $sql");
 
-  //mysqli_query($link, $sql );
+  $result = mysqli_query($link, $sql );
 
   // Are there any errors?
   if (mysqli_query($link, $sql)) {
     debug_to_console("Records query executed successfully.");
-    dubug_to_console("Retrieving records.");
+    debug_to_console("Retrieving records.");
     echo "Retrieving the requested records.";
-    // Go to another PHP file
-    header('Location: results_select_all/index.php');
-    die();
+    if (mysqli_num_rows($result) > 0) {
+      // Output data of each row
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo "Account Number: ".$row["AccountNo"]."<br>";
+        echo "Account Status: ".$row["AcctStatus"]."<br>";
+        echo "Service Start Date: ".$row["SrtDate"]."<br>";
+        echo "Tenant Name: ".$row["TName"]."<br>";
+        echo "Tenant Address 1: ".$row["TAdd1"]."<br>";
+        echo "Tenant Address 2: ".$row["TAdd2"]."<br>";
+        echo "Tenant Address 3: ".$row["TAdd3"]."<br>";
+        echo "Tenant Phone Number: ".$row["TPhone"]."<br>";
+        echo "Tenant Email Address: ".$row["TEmail"]."<br>";
+        echo "Tenant City: ".$row["TCity"]."<br>";
+        echo "Tenant State: ".$row["TState"]."<br>";
+        echo "Tenant Zip Code: ".$row["TZip"]."<br>";
+        echo "Tenant Address 1: ".$row["TAdd1"]."<br>";
+        echo "Tenant Driver's License Number: ".$row["TDL#"]."<br>";
+        echo "Tenant Cell Phone Number: ".$row["TCell#"]."<br>";
+        echo "Tenant Date of Birth: ".$row["TDoB"]."<br>";
+      }
+    } else {
+        echo "0 results.";
+    }
   } else {
     debug_to_console("Error: " . $sql . mysqli_error($link));
   }
