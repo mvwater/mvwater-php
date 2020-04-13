@@ -28,7 +28,7 @@
   // Check if search_query is filled
   if (!isset($_POST['all_search_field'])) {
     debug_to_console($_POST['all_search_field']);
-    died('There seems to be a problem with what you searched for.');
+    echo "There seems to be a problem with what you searched for.";
   }
 
   // Clean the input to prevent against injection attacks
