@@ -38,7 +38,7 @@
   OR WHERE TAdd1 LIKE ('".$searchQuery."')
   OR WHERE TPhone LIKE ('".$searchQuery."')
   OR WHERE TEmail LIKE ('".$searchQuery."')
-  TDoB LIKE ('".$searchQuery."')";
+  OR WHERE TDoB LIKE ('".$searchQuery."')";
 
   debug_to_console("Query to execute: $sql");
 
