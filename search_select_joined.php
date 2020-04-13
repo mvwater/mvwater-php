@@ -101,7 +101,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   }
 } else if ($searchAttribute == "consumptionhistory" && $searchBy == "TAdd1") {
   // Generate SQL Query
-  $sql = "SELECT AccountNo,Bill_date,Beg_read,End_read,'Read.date',Service,Cons,Amount,Penalty
+  $sql = "SELECT AccountNo,Bill_date,Beg_read,End_read,Read_date,Service,Cons,Amount,Penalty
   FROM consumptionhistory
   INNER JOIN accounts
   ON consumptionhistory.AccountNo = accounts.AccountNo
@@ -139,7 +139,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   }
 } else if ($searchAttribute == "consumptionhistory" && $searchBy == "AccountNo") {
   // Generate SQL Query
-  $sql = "SELECT AccountNo,Bill_date,Beg_read,End_read,'Read.date',Service,Cons,Amount,Penalty
+  $sql = "SELECT AccountNo,Bill_date,Beg_read,End_read,Read_date,Service,Cons,Amount,Penalty
   FROM consumptionhistory
   WHERE AccountNo
   LIKE ('".$searchQuery."')";
@@ -174,7 +174,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   }
 } else if ($searchAttribute == "paymenthistory" && $searchBy == "TAdd1") {
   // Generate SQL Query
-  $sql = "SELECT Payment_Key,AccountNo,'Pay date','Amount Paid',Type,Reference,Batch,Seq
+  $sql = "SELECT Payment_Key,AccountNo,Pay_date,Amount_Paid,Type,Reference,Batch,Seq
   FROM paymenthistory
   INNER JOIN accounts
   ON paymenthistory.AccountNo = accounts.AccountNo
@@ -211,7 +211,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   }
 } else if ($searchAttribute == "paymenthistory" && $searchBy == "AccountNo") {
   // Generate SQL Query
-  $sql = "SELECT Payment_Key,AccountNo,'Pay date','Amount Paid',Type,Reference,Batch,Seq
+  $sql = "SELECT Payment_Key,AccountNo,Pay_date,Amount_Paid,Type,Reference,Batch,Seq
   FROM paymenthistory
   WHERE AccountNo
   LIKE ('".$searchQuery."')";
@@ -243,7 +243,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
     debug_to_console("Error: " . $sql . mysqli_error($link));
   }
 } else if ($searchAttribute == "receivableshistory" && $searchBy == "TAdd1") {
-  $sql = "SELECT Receiv_Key,AccountNo,Invoice,Inv_date,Amount,To_post,Amt_paid,Paid_date,'Refer#',Balance
+  $sql = "SELECT Receiv_Key,AccountNo,Invoice,Inv_date,Amount,To_post,Amt_paid,Paid_date,Refer,Balance
   FROM receivableshistory
   INNER JOIN accounts
   ON receivableshistory.AccountNo = accounts.AccountNo
@@ -280,7 +280,7 @@ if ($searchAttribute == "comments" && $searchBy == "TAdd1") {
   }
 } else if ($searchAttribute == "receivableshistory" && $searchBy == "AccountNo") {
   // Generate SQL Query
-  $sql = "SELECT Receiv_Key,AccountNo,Invoice,Inv_date,Amount,To_post,Amt_paid,Paid_date,'Refer#',Balance
+  $sql = "SELECT Receiv_Key,AccountNo,Invoice,Inv_date,Amount,To_post,Amt_paid,Paid_date,Refer,Balance
   FROM receivableshistory
   WHERE AccountNo
   LIKE ('".$searchQuery."')";
