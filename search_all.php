@@ -52,9 +52,31 @@
     debug_to_console("Records query executed successfully.");
     dubug_to_console("Retrieving records.");
     echo "Retrieving the requested records.";
-    // Go to another PHP file
-    header('Location: results_search_all/index.php');
-    die();
+    // Output the data from each row
+    // Check to make sure we're not returning an empty query
+    if (mysqli_num_rows($result) > 0) {
+      // Iterate through rows
+      while ($row = mysqli_fetch_assoc($result)) {
+        echo "Account Number: ".$row["AccountNo"]."<br>";
+        echo "Account Status: ".$row["AcctStatus"]."<br>";
+        echo "Service Start Date: ".$row["SrtDate"]."<br>";
+        echo "Tenant Name: ".$row["TName"]."<br>";
+        echo "Tenant Address 1: ".$row["TAdd1"]."<br>";
+        echo "Tenant Address 2: ".$row["TAdd2"]."<br>";
+        echo "Tenant Address 3: ".$row["TAdd3"]."<br>";
+        echo "Tenant Phone Number: ".$row["TPhone"]."<br>";
+        echo "Tenant Email Address: ".$row["TEmail"]."<br>";
+        echo "Tenant City: ".$row["TCity"]."<br>";
+        echo "Tenant State: ".$row["TState"]."<br>";
+        echo "Tenant Zip Code: ".$row["TZip"]."<br>";
+        echo "Tenant Address 1: ".$row["TAdd1"]."<br>";
+        echo "Tenant Driver's License Number: ".$row["TDL#"]."<br>";
+        echo "Tenant Cell Phone Number: ".$row["TCell#"]."<br>";
+        echo "Tenant Date of Birth: ".$row["TDoB"]."<br>";
+      }
+    } else {
+      echo "0 results.";
+    }
   } else {
     debug_to_console("Error: " . $sql . mysqli_error($link));
   }
